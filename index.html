@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Encuentra tu Superhero</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import -->
+    <!-- JQuery 3.6.0 -->
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- CanvasJS 1.7.0 -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"
+        integrity="sha512-FJ2OYvUIXUqCcPf1stu+oTBlhn54W0UisZB/TNrZaVMHHhYvLBV9jMbvJYtvDe5x/WVaoXZ6KB+Uqe5hT2vlyA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Bootstrap 5.1.0 JS-->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+        </script>
+    <!-- Bootstrap 5.1.0 Style-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- Personal -->
+    <!-- Style-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Javascript -->
+    <script defer src="assets/js/script.js"></script>
+</head>
+
+<body>
+    <!--Nav -->
+    <nav class="navbar navbar-light navbar-expand-md bg-secondary justify-content-center">
+        <div class="container">
+            <a href="/" class="navbar-brand d-flex">
+                <img class="logo-superhero-navbar-lx d-none d-sm-none d-md-block d-lg-block d-xl-block d-xxl-block"
+                    src="./assets/img/sh2.jpg" alt="logo-superhero-white" />
+                <img class="logo-superhero-navbar-xs d-block d-sm-block d-md-none d-lg-none d-xl-none d-xxl-none"
+                    src="./assets/img/sh2.jpg" alt="logo-superhero-white" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar3">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+                <ul class="navbar-nav ms-auto w-100">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">SuperHero</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Nav End-->
+
+    <!-- Container -->
+    <main class="container">
+        <div class="row justify-content-center pt-3">
+            <div class="col col-sm-12 col-md-6 col-lg-6">
+                <div class="card">
+                    <img src="./assets/img/sh1.jpg" class="card-img-top" alt="superhero img">
+                    <div class="card-body">
+                        <h5 class="card-title">Encuentra tu SuperHero</h5>
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label" for="input_search">
+                                    Ingrese el número del superhero a buscar
+                                </label>
+                                <input id="input_search" name="input_search" class="form-control" type="text"
+                                    aria-describedby="searchHelp">
+                                <div id="searchHelp" name="searchHelp" class="form-text">
+                                </div>
+                            </div>
+                            <button id="btn-buscar-superhero" name="btn-buscar-superhero" class="btn btn-primary"
+                                type="submit">Buscar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Container End -->
+
+
+</body>
+
+</html>

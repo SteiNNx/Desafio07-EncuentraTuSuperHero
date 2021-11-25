@@ -1,7 +1,8 @@
 /** Variables */
 const ACCESS_TOKE = 10226244828616938;
 const BASE_URL = 'https://superheroapi.com/api';
-const API_URL = `https://cors-anywhere.herokuapp.com/${BASE_URL}/${ACCESS_TOKE}`;
+const LOCAL_CORS = 'https://cors-anywhere.herokuapp.com/';
+const API_URL = `${BASE_URL}/${ACCESS_TOKE}`;
 
 $(document).ready(function () {
 

@@ -2,7 +2,16 @@
 const ACCESS_TOKE = 10226244828616938;
 const BASE_URL = 'https://superheroapi.com/api';
 const LOCAL_CORS = 'https://cors-anywhere.herokuapp.com/';
-const API_URL = `${BASE_URL}/${ACCESS_TOKE}`;
+
+/** IMPORTANTE: 
+ * ya que me daba problemas de cors local y en github pages
+ * Uso la herramienta cors-anywhere para saltarse el unico problema
+ * es que hay que navegar a la pagina y darle click a "Request temporary access to the demo server"
+ * @link https://cors-anywhere.herokuapp.com/corsdemo
+ */
+
+/**            !!!Eliminar LOCAL_CORS!!! */
+const API_URL = `${LOCAL_CORS}${BASE_URL}/${ACCESS_TOKE}`;
 
 $(document).ready(function () {
 

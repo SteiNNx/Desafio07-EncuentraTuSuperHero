@@ -33,6 +33,38 @@ $(document).ready(function () {
 
     const setGraph = valueSuperHero => {
 
+        const statsSuperHero = Object.entries(valueSuperHero.powerstats)
+            .map((value) => {
+                return {
+                    y: value[1],
+                    label: value[0]
+                }
+            });
+
+        let chart = new CanvasJS.Chart("graph_container", {
+            theme: "light2",
+            exportEnabled: false,
+            animationEnabled: true,
+            title: {
+                text: `Estadísticas de Poder para ${valueSuperHero.name}`,
+                fontFamily: "Roboto",
+                fontWeight: "700",
+            },
+
+            data: [{
+                type: "pie",
+                startAngle: 25,
+                toolTipContent: "<b>{label}</b>: {y}%",
+                showInLegend: "true",
+                legendText: "{label}",
+                indexLabelFontFamily: "Roboto",
+                indexLabelFontWeight: "500",
+                indexLabelFontSize: 16,
+                indexLabel: "{label} ({y})",
+                dataPoints: statsSuperHero,
+            }]
+        });
+        chart.render();
     }
 
 
@@ -46,6 +78,7 @@ $(document).ready(function () {
         })
             .done((success) => {
                 setCard(success);
+                setGraph(success);
             })
             .fail((error) => {
                 console.error(error);

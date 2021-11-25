@@ -1,3 +1,15 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+li {
+    font-style: italic;
+}
+
+a {
+    font-weight: 700;
+}
+
 .logo-superhero-navbar-xs {
     width: 2.4rem;
     height: 1.8rem;

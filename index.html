@@ -55,8 +55,8 @@
 
     <!-- Container -->
     <main class="container">
-        <div class="row justify-content-center pt-3">
-            <div class="col col-sm-12 col-md-6 col-lg-6">
+        <div class="row g-5 py-5">
+            <div class="col-sm-12 col-md-6 col-lg-6 offset-md-3 offset-lg-3">
                 <div class="card">
                     <img src="./assets/img/sh1.jpg" class="card-img-top" alt="superhero img">
                     <div class="card-body">
@@ -77,6 +77,25 @@
                     </div>
                 </div>
             </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div id="resultado-superhero" class="card flex-row">
+                    <img id="card-avatar" src="./assets/img/sh1.jpg" class="card-img-top w-50" alt="...">
+                    <div class="card-body">
+                        <h5 id="card-title" class="card-title"></h5>
+                        <p id="card-text" class="card-text">
+                        </p>
+                        <ul id="card-lista" class="list-group list-group-flush">
+                            <li id="li-publicado" class="list-group-item"></li>
+                            <li id="li-ocupacion" class="list-group-item"></li>
+                            <li id="li-primera-aparicion" class="list-group-item"></li>
+                            <li id="li-altura" class="list-group-item"></li>
+                            <li id="li-peso" class="list-group-item"></li>
+                            <li id="li-alianzas" class="list-group-item"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </main>
     <!-- Container End -->

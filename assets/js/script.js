@@ -19,6 +19,24 @@ $(document).ready(function () {
         document.getElementById('searchHelp').innerHTML = valueText;
     }
 
+    const setCard = valueSuperHero => {
+        document.getElementById('card-avatar').src = valueSuperHero.image.url;
+        document.getElementById('card-title').innerText = `Nombre: ${valueSuperHero.name}`;
+        document.getElementById('card-text').innerText = `Conexiones: ${valueSuperHero.connections['group-affiliation']}`;
+        document.getElementById('li-publicado').innerHTML = `Publicado por: ${valueSuperHero.biography.publisher}`;
+        document.getElementById('li-ocupacion').innerHTML = `Ocupación: ${valueSuperHero.work.occupation}`;
+        document.getElementById('li-primera-aparicion').innerHTML = `Primera Aparicion: ${valueSuperHero.biography['first-appearance']}`;
+        document.getElementById('li-altura').innerHTML = `Altura: ${valueSuperHero.appearance.height.join(' - ')}`;
+        document.getElementById('li-peso').innerHTML = `Altura: ${valueSuperHero.appearance.weight.join(' - ')}`;
+        document.getElementById('li-alianzas').innerHTML = `Alianzas: ${valueSuperHero.biography.aliases.join(', ')}`;
+    }
+
+    const setGraph = valueSuperHero => {
+
+    }
+
+
+
     $("#btn-buscar-superhero").click((event) => {
         event.preventDefault();
         setHelp('');
@@ -27,10 +45,10 @@ $(document).ready(function () {
             url: `${API_URL}/${inputValue}`,
         })
             .done((success) => {
-
+                setCard(success);
             })
-            .error((error) => {
-
+            .fail((error) => {
+                console.error(error);
             });
     });
 

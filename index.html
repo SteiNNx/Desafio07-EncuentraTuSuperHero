@@ -76,14 +76,20 @@
                                 </div>
                             </div>
                             <button id="btn-buscar-superhero" name="btn-buscar-superhero" class="btn btn-primary"
-                                type="submit">Buscar</button>
+                                type="submit">
+                                <span id="buscar-label">Buscar</span>
+                                <div id="buscar-loading" class="spinner-border spinner-border-sm text-info d-none"
+                                    role="status">
+                                </div>
+                            </button>
                         </form>
                     </div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6">
-                <div id="resultado-superhero" class="card flex-row">
-                    <img id="card-avatar" src="./assets/img/sh1.jpg" class="card-img-top w-50" alt="...">
+                <div id="resultado-superhero" class="card flex-md-row flex-lg-row align-items-center d-none">
+                    <img id="card-avatar" src="./assets/img/sh1.jpg" class="card-img-top w-50 card-image-hero"
+                        alt="...">
                     <div class="card-body">
                         <h5 id="card-title" class="card-title"></h5>
                         <p id="card-text" class="card-text">
@@ -107,6 +113,13 @@
     </main>
     <!-- Container End -->
 
+    <footer class="container-fluid text-center bg-secondary text-white">
+        <div class="row m-4">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <p>© 2018 Jorge Reyes .Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

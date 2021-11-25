@@ -1,5 +1,10 @@
 body {
     font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding-bottom: 100px;
+    box-sizing: border-box;
 }
 
 li {
@@ -18,4 +23,18 @@ a {
 .logo-superhero-navbar-lx {
     width: 4rem;
     height: 3.4rem;
+}
+
+.card-image-hero {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 100%;
+}
+footer {
+    left: 0;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    height: 100px;
 }

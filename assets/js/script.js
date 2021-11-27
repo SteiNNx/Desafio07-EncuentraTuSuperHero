@@ -11,12 +11,12 @@ const LOCAL_CORS = 'https://cors-anywhere.herokuapp.com/';
  */
 
 /**            !!!Eliminar LOCAL_CORS!!! */
-const API_URL = `${LOCAL_CORS}${BASE_URL}/${ACCESS_TOKE}`;
+const API_URL = `${BASE_URL}/${ACCESS_TOKE}`;
 
 $(document).ready(function () {
 
     const obtenerValueInput = _ => {
-        const value = parseInt(document.getElementById('input_search').value);
+        const value = parseInt($('#input_search').val());
         if (typeof value === 'NaN'
             || isNaN(value)) {
             setHelp('Porfavor, Ingrese N°');
@@ -26,23 +26,23 @@ $(document).ready(function () {
     }
 
     const setHelp = valueText => {
-        document.getElementById('searchHelp').innerHTML = valueText;
+        $('#searchHelp').html(valueText);
     }
 
-    const removeDisplayNone = id_element => document.getElementById(id_element).classList.remove('d-none');
-    const addDisplayNone = id_element => document.getElementById(id_element).classList.add('d-none');
+    const removeDisplayNone = id_element => $(`#${id_element}`).removeClass('d-none');
+    const addDisplayNone = id_element => $(`#${id_element}`).addClass('d-none');
 
     const setCard = valueSuperHero => {
-        document.getElementById('resultado-superhero').classList.remove('d-none');
-        document.getElementById('card-avatar').src = valueSuperHero.image.url;
-        document.getElementById('card-title').innerText = `Nombre: ${valueSuperHero.name}`;
-        document.getElementById('card-text').innerText = `Conexiones: ${valueSuperHero.connections['group-affiliation']}`;
-        document.getElementById('li-publicado').innerHTML = `Publicado por: ${valueSuperHero.biography.publisher}`;
-        document.getElementById('li-ocupacion').innerHTML = `Ocupación: ${valueSuperHero.work.occupation}`;
-        document.getElementById('li-primera-aparicion').innerHTML = `Primera Aparicion: ${valueSuperHero.biography['first-appearance']}`;
-        document.getElementById('li-altura').innerHTML = `Altura: ${valueSuperHero.appearance.height.join(' - ')}`;
-        document.getElementById('li-peso').innerHTML = `Altura: ${valueSuperHero.appearance.weight.join(' - ')}`;
-        document.getElementById('li-alianzas').innerHTML = `Alianzas: ${valueSuperHero.biography.aliases.join(', ')}`;
+        $('#resultado-superhero').removeClass('d-none');
+        $('#card-avatar').attr('src', `${valueSuperHero.image.url}`);
+        $('#card-title').text(`Nombre: ${valueSuperHero.name}`);
+        $('#card-text').text(`Conexiones: ${valueSuperHero.connections['group-affiliation']}`);
+        $('#li-publicado').html(`Publicado por: ${valueSuperHero.biography.publisher}`);
+        $('#li-ocupacion').html(`Ocupación: ${valueSuperHero.work.occupation}`);
+        $('#li-primera-aparicion').html(`Primera Aparicion: ${valueSuperHero.biography['first-appearance']}`);
+        $('#li-altura').html(`Altura: ${valueSuperHero.appearance.height.join(' - ')}`);
+        $('#li-peso').html(`Altura: ${valueSuperHero.appearance.weight.join(' - ')}`);
+        $('#li-alianzas').html(`Alianzas: ${valueSuperHero.biography.aliases.join(', ')}`);
     }
 
     const setGraph = valueSuperHero => {
@@ -82,7 +82,7 @@ $(document).ready(function () {
             });
             chart.render();
         } else {
-            document.getElementById('graph_container').innerHTML = '<p>Datos insuficientes...</p>'
+            $('#graph_container').html('<p>Datos insuficientes...</p>');
         }
     }
 

@@ -20,6 +20,9 @@ $(document).ready(function () {
         if (typeof value === 'NaN'
             || isNaN(value)) {
             setHelp('Porfavor, Ingrese N°');
+            /** Termino Efecto Loading */
+            addDisplayNone('buscar-loading');
+            removeDisplayNone('buscar-label');
             throw new Error("Porfavor, Ingrese N°. Stop script!!");
         }
         return value;
